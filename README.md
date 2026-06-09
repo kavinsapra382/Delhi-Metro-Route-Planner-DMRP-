@@ -8,7 +8,7 @@ A C++ based Delhi Metro Route Planning System that helps commuters find the opti
 - **Minimum Stops Route** — BFS (O(V+E))
 - **Dynamic Station Closure** — Close multiple stations due to maintenance, system auto-reroutes
 - **Real Delhi Metro Data** — Blue, Yellow, Red, Magenta, Violet Lines
-- **Case Insensitive Input** — Type in any case, system handles it
+- **ALL CAPS Input** — Station names must be entered in capital letters
 - **Path Tracing** — Displays full route from source to destination
 
 ## 📊 Tech Stack
