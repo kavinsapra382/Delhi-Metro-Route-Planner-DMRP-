@@ -43,11 +43,18 @@ g++ Metro_Route_Planner.cpp -o metro
 
 NOTE : Write Station Name in ALL CAPS
 Enter source station: **RITHALA**
+
 Enter destination station: **KALKAJI MANDIR**
+
  
 Enter closed stations one by one in ALL CAPS (press Enter when done):
+
 Closed station: **KAROL BAGH**
+
 Closed station: **HAUZ KHAS**
+
 Closed station: 
+
 Least time taken from **RITHALA** to **KALKAJI MANDIR** is 55 minutes
+
 RITHALA -> ROHINI WEST -> ROHINI EAST -> PITAMPURA -> KOHAT ENCLAVE -> NETAJI SUBHASH PLACE -> KESHAV PURAM -> KANHAIYA NAGAR -> INDERLOK -> SHASTRI NAGAR -> PRATAP NAGAR -> PULBANGASH -> TIS HAZARI -> KASHMERE GATE -> CHANDNI CHOWK -> CHAWRI BAZAR -> NEW DELHI -> RAJIV CHOWK -> PATEL CHOWK -> CENTRAL SECRETARIAT -> KHAN MARKET -> JLN STADIUM -> JANGPURA -> LAJPAT NAGAR -> MOOLCHAND -> KAILASH COLONY -> NEHRU PLACE -> KALKAJI MANDIR
