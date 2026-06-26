@@ -222,6 +222,50 @@ void ClosedStation(string stn){
     }
 }
 
+void MinStopsRoute(string src, string dest) {
+    unordered_map<string, bool> visited;
+    unordered_map<string, string> parent;
+    queue<string> q;
+
+    q.push(src);
+    visited[src] = true;
+    parent[src] = "-1";
+
+    while (!q.empty()) {
+        string node = q.front();
+        q.pop();
+
+        if (node == dest) break; 
+
+        for (auto ngh : metro[node]) {
+            string adjstn = ngh.first;
+            if (!visited[adjstn]) {
+                visited[adjstn] = true;
+                parent[adjstn] = node;
+                q.push(adjstn);
+            }
+        }
+    }
+
+    if (parent.find(dest) == parent.end()) {
+        cout << "Station unreachable!\n";
+        return;
+    }
+
+    vector<string> path;
+    string start = dest;
+    while (start != "-1") {
+        path.push_back(start);
+        start = parent[start];
+    }
+    reverse(path.begin(), path.end());
+
+    cout << "Minimum stops: " << path.size() - 1 << "\n";
+    for (int i = 0; i < path.size(); i++) {
+        cout << path[i];
+        if (i != path.size() - 1) cout << " -> ";
+    }
+}
 void LeastTimeRoute(string src , string dest){
     unordered_map<string,int> reachingtime;
     for(auto stops : metro){
@@ -287,6 +331,8 @@ int main(){
         if(stn == "") break;        // empty input = done
         ClosedStation(stn);         // close each station
     }
-
+    MinStopsRoute(src , dest);
+    cout << endl;
+    cout << endl;
     LeastTimeRoute(src , dest);
 }
